@@ -160,6 +160,83 @@
       background-color: #1a1a1a;
       transform: scale(1.1);
     }
+
+   /* CSS-Stile für den Footer */
+        
+        /* Sorgt dafür, dass der Footer unten bleibt, 
+           auch wenn die Seite wenig Inhalt hat (optional) */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        main {
+            flex-grow: 1; /* Schiebt den Footer nach unten */
+        }
+
+
+        /* Das eigentliche Footer-Styling */
+        .site-footer {
+            background-color: #26272b; /* Dunkler Hintergrund */
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            color: #8f8f8f; /* Grauer Text */
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Styling für die Social-Media-Icons */
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px; /* Vertikal zentrieren */
+            margin: 0 8px;
+            border-radius: 50%; /* Runde Icons */
+            background-color: #33383b;
+            color: #ffffff; /* Weiße Icons */
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: #007bff; /* Blauer Hover-Effekt (Beispiel) */
+            transform: scale(1.1); /* Leichter Zoom-Effekt */
+        }
+
+        /* Styling für die Text-Links (Impressum, etc.) */
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #8f8f8f;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff; /* Heller werden beim Hover */
+        }
+
+        /* Copyright-Text */
+        .copyright {
+            font-size: 0.9em;
+        }
+
+        
+
+    
   </style>
 </head>
 <body>
@@ -179,12 +256,17 @@
   <div class="tab-content active" id="about">
     <div class="intro">
       <div>
-        <h2>Hi, mein Name ist Noah Nolden</h2>
-        <p>Welcome to my personal page!</p>
-        <p>Currently, I am at the University of Applied Sciences Mainz.</p>
+        <h2>Präzise Daten, smarte Lösungen.</h2>
+        <p>Als Student der Angewandten Informatik 
+          und Geodäsie in Mainz</p> 
+          <p>bewege ich mich  an der Schnittstelle von digitaler Welt 
+          und realem Gelände.</p> 
+          <p>Herzlich willkommen auf meiner Website.</p>
       </div>
       <img src="Noah1.png" alt="Noah Nolden" />
     </div>
+
+    <hr>
 
     <h3>Mein Lebenslauf</h3>
     <table class="cv-table">
@@ -213,6 +295,70 @@
         </tr>
       </tbody>
     </table>
+
+    <hr>
+    
+    <div class="intro">
+      <img src="Lebenslauf.png" alt="Lebenslauf" />
+      <div>
+            <section id="studium">
+                <h2>Studium & Kompetenzen</h2>
+                <p>
+                    Mein Studium an der Hochschule Mainz kombiniert zwei spannende Felder: <strong>Angewandte Informatik</strong> und <strong>Geodäsie</strong>.
+                </p>
+                <p>
+                    Ich lerne nicht nur die Grundlagen der Softwareentwicklung und Datenanalyse, sondern auch, wie man Geodaten präzise erfasst und verarbeitet. Mein Fokus liegt auf modernen Technologien, die die Vermessung revolutionieren.
+                </p>
+                
+                <h3>Kernkompetenzen:</h3>
+                <ul>
+                    <li>Geodätische Messtechnik (Tachymetrie, GNSS)</li>
+                    <li>Photogrammetrie (insb. Drohnenvermessung)</li>
+                    <li>3D-Datenerfassung (Laserscanning)</li>
+                    <li>Geoinformationssysteme (GIS)</li>
+                    <li>Grundlagen der Programmierung (z.B. Python, Java)</li>
+                </ul>
+            </section>
+     </div>
+      
+    </div>
+
+    <hr>
+        <div class="tab-content active" id="about">
+          <div class="intro">
+          <section id="ueber-mich">
+            <h2>Über mich</h2>
+            <p>
+                Hallo, mein Name ist Noah Nolden. Ich bin 22 Jahre alt und stehe kurz vor meinem Bachelorabschluss im Studiengang Angewandte Informatik und Geodäsie an der Hochschule Mainz.
+            </p>
+            <p>
+                Mich fasziniert, wie wir die reale Welt mit digitaler Präzision erfassen und analysieren können. Ob durch Programmierung oder den Einsatz modernster Sensortechnik – ich brenne dafür, Daten in wertvolle Informationen zu verwandeln.
+            </p>
+            <p>
+                Neben dem Studium brauche ich den körperlichen Ausgleich. Ich mache viel Sport, was mir nicht nur Energie gibt, sondern auch den Kopf für komplexe technische Herausforderungen freihält.
+            </p>
+          </section>
+
+          <section id="bachelorarbeit">
+              <h2>Bachelorarbeit</h2>
+              <p>
+                  Mein nächster Meilenstein: Die Bachelorarbeit.
+                  Aktuell bereite ich meine Abschlussarbeit vor. Das voraussichtliche Thema ist die <strong>"Effizienzanalyse und Genauigkeitsvergleich bei der Erdmassenbestimmung"</strong>.
+              </p>
+              <p>
+                  Ich plane, drei zentrale Messmethoden der modernen Geodäsie gegenüberzustellen:
+              </p>
+              <ul>
+                  <li><strong>Drohnenvermessung</strong> (Photogrammetrie)</li>
+                  <li><strong>Terrestrisches Laserscanning</strong> (TLS)</li>
+                  <li><strong>Klassische Tachymetermessung</strong></li>
+              </ul>
+          </section>
+    </div>
+
+    <hr>
+
+
   </div>
 
   <!-- News Tab -->
@@ -232,12 +378,12 @@
 
   <!-- Kontakt-Icons -->
   <div class="contact-icons">
-    <a href="https://github.com/DEIN_USERNAME" target="_blank" title="GitHub">
+    <a href="https://noah-nolden.github.io/" target="_blank" title="GitHub">
       <i class="fab fa-github"></i>
     </a>
-    <a href="https://linkedin.com/in/DEIN_USERNAME" target="_blank" title="LinkedIn">
-      <i class="fab fa-linkedin"></i>
-    </a>
+    <a href="https://www.amazon.de" target="_blank" title="Amazon">
+      <i class="fab fa-amazon"></i>
+    </a>    
     <a href="mailto:Nolden.n8@gmx.de" title="E-Mail">
       <i class="fas fa-envelope"></i>
     </a>
@@ -313,5 +459,23 @@
         });
     });
   </script>
+<footer class="site-footer">
+        <div class="footer-content">
+            
+            
+            <div class="footer-links">
+              <a href="impressum.html">Impressum</a>
+              <a href="datenschutz.html">Datenschutz</a>
+              <a href="kontakt.html">Kontakt</a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2024 Noah Nolden. Alle Rechte vorbehalten.
+            </div>
+            
+        </div>
+    </footer>
+
 </body>
 </html>
+
