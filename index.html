@@ -1,12 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <title>Noah Nolden</title>
 
-  <!-- FontAwesome für Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
   <style>
@@ -26,6 +25,7 @@
       --table-header: #333333;
     }
 
+    /* KORREKTUR 1: 'body'-Regeln wurden zusammengefasst */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -33,6 +33,11 @@
       background: var(--bg-color);
       color: var(--text-color);
       transition: background 0.3s, color 0.3s;
+      
+      /* Stile für Sticky Footer (waren vorher doppelt) */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -160,82 +165,70 @@
       background-color: #1a1a1a;
       transform: scale(1.1);
     }
+   
+    /* KORREKTUR 1: Die doppelte 'body'-Regel wurde von hier entfernt */
 
-   /* CSS-Stile für den Footer */
-        
-        /* Sorgt dafür, dass der Footer unten bleibt, 
-           auch wenn die Seite wenig Inhalt hat (optional) */
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-        main {
-            flex-grow: 1; /* Schiebt den Footer nach unten */
-        }
+    /* Das eigentliche Footer-Styling */
+    main {
+        flex-grow: 1; /* Schiebt den Footer nach unten */
+    }
+    
+    .site-footer {
+        background-color: #26272b; /* Dunkler Hintergrund */
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        color: #8f8f8f; /* Grauer Text */
+        text-align: center;
+    }
 
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-        /* Das eigentliche Footer-Styling */
-        .site-footer {
-            background-color: #26272b; /* Dunkler Hintergrund */
-            padding: 40px 20px;
-            font-family: Arial, sans-serif;
-            color: #8f8f8f; /* Grauer Text */
-            text-align: center;
-        }
+    /* Styling für die Social-Media-Icons */
+    .social-icons {
+        margin-bottom: 20px;
+    }
 
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px; /* Vertikal zentrieren */
+        margin: 0 8px;
+        border-radius: 50%; /* Runde Icons */
+        background-color: #33383b;
+        color: #ffffff; /* Weiße Icons */
+        font-size: 18px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
 
-        /* Styling für die Social-Media-Icons */
-        .social-icons {
-            margin-bottom: 20px;
-        }
+    .social-icons a:hover {
+        background-color: #007bff; /* Blauer Hover-Effekt (Beispiel) */
+        transform: scale(1.1); /* Leichter Zoom-Effekt */
+    }
 
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px; /* Vertikal zentrieren */
-            margin: 0 8px;
-            border-radius: 50%; /* Runde Icons */
-            background-color: #33383b;
-            color: #ffffff; /* Weiße Icons */
-            font-size: 18px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+    /* Styling für die Text-Links (Impressum, etc.) */
+    .footer-links {
+        margin-bottom: 15px;
+    }
 
-        .social-icons a:hover {
-            background-color: #007bff; /* Blauer Hover-Effekt (Beispiel) */
-            transform: scale(1.1); /* Leichter Zoom-Effekt */
-        }
+    .footer-links a {
+        color: #8f8f8f;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
 
-        /* Styling für die Text-Links (Impressum, etc.) */
-        .footer-links {
-            margin-bottom: 15px;
-        }
+    .footer-links a:hover {
+        color: #ffffff; /* Heller werden beim Hover */
+    }
 
-        .footer-links a {
-            color: #8f8f8f;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #ffffff; /* Heller werden beim Hover */
-        }
-
-        /* Copyright-Text */
-        .copyright {
-            font-size: 0.9em;
-        }
-
-        
-
+    /* Copyright-Text */
+    .copyright {
+        font-size: 0.9em;
+    }
     
   </style>
 </head>
@@ -252,133 +245,125 @@
     <button class="tab-button" data-tab="projects">Projects</button>
   </div>
 
-  <!-- About Tab -->
-  <div class="tab-content active" id="about">
-    <div class="intro">
-      <div>
-        <h2>Präzise Daten, smarte Lösungen.</h2>
-        <p>Als Student der Angewandten Informatik 
-          und Geodäsie in Mainz</p> 
-          <p>bewege ich mich  an der Schnittstelle von digitaler Welt 
-          und realem Gelände.</p> 
-          <p>Herzlich willkommen auf meiner Website.</p>
-      </div>
-      <img src="Noah1.png" alt="Noah Nolden" />
-    </div>
-
-    <hr>
-
-    <h3>Mein Lebenslauf</h3>
-    <table class="cv-table">
-      <thead>
-        <tr>
-          <th>Jahr</th>
-          <th>Position</th>
-          <th>Institution</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2023 - Present</td>
-          <td>Studium</td>
-          <td>University of Applied Sciences Mainz</td>
-        </tr>
-        <tr>
-          <td>2019 - 2023</td>
-          <td>Abitur</td>
-          <td>Berufsbildende Schule Betzdorf /- Kirchen</td>
-        </tr>
-        <tr>
-          <td>2013 - 2019</td>
-          <td>Realschulabschluss</td>
-          <td>Realschule auf der Morgenröthe</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr>
+  <main>
     
-    <div class="intro">
-      <img src="Lebenslauf.png" alt="Lebenslauf" />
-      <div>
-            <section id="studium">
-                <h2>Studium & Kompetenzen</h2>
-                <p>
-                    Mein Studium an der Hochschule Mainz kombiniert zwei spannende Felder: <strong>Angewandte Informatik</strong> und <strong>Geodäsie</strong>.
-                </p>
-                <p>
-                    Ich lerne nicht nur die Grundlagen der Softwareentwicklung und Datenanalyse, sondern auch, wie man Geodaten präzise erfasst und verarbeitet. Mein Fokus liegt auf modernen Technologien, die die Vermessung revolutionieren.
-                </p>
-                
-                <h3>Kernkompetenzen:</h3>
-                <ul>
-                    <li>Geodätische Messtechnik (Tachymetrie, GNSS)</li>
-                    <li>Photogrammetrie (insb. Drohnenvermessung)</li>
-                    <li>3D-Datenerfassung (Laserscanning)</li>
-                    <li>Geoinformationssysteme (GIS)</li>
-                    <li>Grundlagen der Programmierung (z.B. Python, Java)</li>
-                </ul>
-            </section>
-     </div>
+    <div class="tab-content active" id="about">
+      <div class="intro">
+        <div>
+          <h2>Präzise Daten, smarte Lösungen.</h2>
+          <p>Als Student der Angewandten Informatik 
+            und Geodäsie in Mainz</p> 
+          <p>bewege ich mich  an der Schnittstelle von digitaler Welt 
+            und realem Gelände.</p> 
+          <p>Herzlich willkommen auf meiner Website.</p>
+        </div>
+        <img src="Noah1.png" alt="Noah Nolden" />
+      </div>
+
+      <hr>
+
+      <h3>Mein Lebenslauf</h3>
+      <table class="cv-table">
+        <thead>
+          <tr>
+            <th>Jahr</th>
+            <th>Position</th>
+            <th>Institution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023 - Present</td>
+            <td>Studium</td>
+            <td>University of Applied Sciences Mainz</td>
+          </tr>
+          <tr>
+            <td>2019 - 2023</td>
+            <td>Abitur</td>
+            <td>Berufsbildende Schule Betzdorf /- Kirchen</td>
+          </tr>
+          <tr>
+            <td>2013 - 2019</td>
+            <td>Realschulabschluss</td>
+            <td>Realschule auf der Morgenröthe</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
       
+      <div class="intro">
+        <img src="Lebenslauf.png" alt="Lebenslauf" />
+        <div>
+              <section id="studium">
+                  <h2>Studium & Kompetenzen</h2>
+                  <p>
+                      Mein Studium an der Hochschule Mainz kombiniert zwei spannende Felder: <strong>Angewandte Informatik</strong> und <strong>Geodäsie</strong>.
+                  </p>
+                  <p>
+                      Ich lerne nicht nur die Grundlagen der Softwareentwicklung und Datenanalyse, sondern auch, wie man Geodaten präzise erfasst und verarbeitet. Mein Fokus liegt auf modernen Technologien, die die Vermessung revolutionieren.
+                  </p>
+                  
+                  <h3>Kernkompetenzen:</h3>
+                  <ul>
+                      <li>Geodätische Messtechnik (Tachymetrie, GNSS)</li>
+                      <li>Photogrammetrie (insb. Drohnenvermessung)</li>
+                      <li>3D-Datenerfassung (Laserscanning)</li>
+                      <li>Geoinformationssysteme (GIS)</li>
+                      <li>Grundlagen der Programmierung (z.B. Python, Java)</li>
+                  </ul>
+              </section>
+       </div>
+        
+      </div>
+
+      <hr>
+      
+      <section id="ueber-mich">
+        <h2>Über mich</h2>
+        <p>
+            Hallo, mein Name ist Noah Nolden. Ich bin 22 Jahre alt und stehe kurz vor meinem Bachelorabschluss im Studiengang Angewandte Informatik und Geodäsie an der Hochschule Mainz.
+        </p>
+        <p>
+            Mich fasziniert, wie wir die reale Welt mit digitaler Präzision erfassen und analysieren können. Ob durch Programmierung oder den Einsatz modernster Sensortechnik – ich brenne dafür, Daten in wertvolle Informationen zu verwandeln.
+        </p>
+        <p>
+            Neben dem Studium brauche ich den körperlichen Ausgleich. Ich mache viel Sport, was mir nicht nur Energie gibt, sondern auch den Kopf für komplexe technische Herausforderungen freihält.
+        </p>
+      </section>
+
+      <section id="bachelorarbeit">
+          <h2>Bachelorarbeit</h2>
+          <p>
+              Mein nächster Meilenstein: Die Bachelorarbeit.
+              Aktuell bereite ich meine Abschlussarbeit vor. Das voraussichtliche Thema ist die <strong>"Effizienzanalyse und Genauigkeitsvergleich bei der Erdmassenbestimmung"</strong>.
+          </p>
+          <p>
+              Ich plane, drei zentrale Messmethoden der modernen Geodäsie gegenüberzustellen:
+          </p>
+          <ul>
+              <li><strong>Drohnenvermessung</strong> (Photogrammetrie)</li>
+              <li><strong>Terrestrisches Laserscanning</strong> (TLS)</li>
+              <li><strong>Klassische Tachymetermessung</strong></li>
+          </ul>
+      </section>
+
+      <hr>
+
+    </div> <div class="tab-content" id="news">
+      <h2>Aktuelle News</h2>
+      <div id="news-container"></div>
     </div>
 
-    <hr>
+    <div class="tab-content" id="projects">
+      <h2>Meine Projekte</h2>
+      <p>Hier sind einige Beispielkarten:</p>
+      <div id="map1" class="map"></div>
+      <div id="map2" class="map"></div>
+      <div id="map3" class="map"></div>
+    </div>
 
-        <div class="tab-content active" id="about">
-          <div class="intro">
-          <section id="ueber-mich">
-            <h2>Über mich</h2>
-            <p>
-                Hallo, mein Name ist Noah Nolden. Ich bin 22 Jahre alt und stehe kurz vor meinem Bachelorabschluss im Studiengang Angewandte Informatik und Geodäsie an der Hochschule Mainz.
-            </p>
-            <p>
-                Mich fasziniert, wie wir die reale Welt mit digitaler Präzision erfassen und analysieren können. Ob durch Programmierung oder den Einsatz modernster Sensortechnik – ich brenne dafür, Daten in wertvolle Informationen zu verwandeln.
-            </p>
-            <p>
-                Neben dem Studium brauche ich den körperlichen Ausgleich. Ich mache viel Sport, was mir nicht nur Energie gibt, sondern auch den Kopf für komplexe technische Herausforderungen freihält.
-            </p>
-          </section>
-
-          <section id="bachelorarbeit">
-              <h2>Bachelorarbeit</h2>
-              <p>
-                  Mein nächster Meilenstein: Die Bachelorarbeit.
-                  Aktuell bereite ich meine Abschlussarbeit vor. Das voraussichtliche Thema ist die <strong>"Effizienzanalyse und Genauigkeitsvergleich bei der Erdmassenbestimmung"</strong>.
-              </p>
-              <p>
-                  Ich plane, drei zentrale Messmethoden der modernen Geodäsie gegenüberzustellen:
-              </p>
-              <ul>
-                  <li><strong>Drohnenvermessung</strong> (Photogrammetrie)</li>
-                  <li><strong>Terrestrisches Laserscanning</strong> (TLS)</li>
-                  <li><strong>Klassische Tachymetermessung</strong></li>
-              </ul>
-          </section>
-        /div>
-
-    <hr>
-
-
-  </div>
-
-  <!-- News Tab -->
-  <div class="tab-content" id="news">
-    <h2>Aktuelle News</h2>
-    <div id="news-container"></div>
-  </div>
-
-  <!-- Projects Tab -->
-  <div class="tab-content" id="projects">
-    <h2>Meine Projekte</h2>
-    <p>Hier sind einige Beispielkarten:</p>
-    <div id="map1" class="map"></div>
-    <div id="map2" class="map"></div>
-    <div id="map3" class="map"></div>
-  </div>
-
-  <!-- Kontakt-Icons -->
-  <div class="contact-icons">
+  </main> <div class="contact-icons">
     <a href="https://noah-nolden.github.io/" target="_blank" title="GitHub">
       <i class="fab fa-github"></i>
     </a>
@@ -390,7 +375,6 @@
     </a>
   </div>
 
-  <!-- Leaflet & Scripts -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
     // Light/Dark Mode
@@ -439,7 +423,7 @@
     newsTab.addEventListener('click', () => {
       if (newsLoaded) return;
 
-      fetch('assets/news.json')
+      fetch('assets/news.json.json')
         .then(response => response.json())
         .then(data => {
           data.forEach(item => {
@@ -460,9 +444,9 @@
         });
     });
   </script>
+  
   <footer class="site-footer">
         <div class="footer-content">
-            
             
             <div class="footer-links">
               <a href="impressum.html">Impressum</a>
