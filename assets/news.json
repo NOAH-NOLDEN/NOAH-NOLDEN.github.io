@@ -10,5 +10,53 @@
     "date": "2025-09-30",
     "image": "assets/images/projektx.jpg",
     "text": "Ein spannendes neues Web-Mapping-Projekt ist in Arbeit. Mehr dazu bald!"
+  }, 
+  {
+    "title": "Bachelorarbeit gestartet!",
+    "date": "2025-10-20",
+    "image": "assets/images/bachelorarbeit_drohne.jpg",
+    "text": "Es ist offiziell: Ich habe mit meiner Bachelorarbeit zum Thema 'Erdmassenbestimmung mittels Drohnenvermessung, Laserscanning und Tachymetrie' begonnen."
+  },
+  {
+    "title": "Vorbereitung Datenerfassung",
+    "date": "2025-10-22",
+    "image": "assets/images/feldmessung.png",
+    "text": "Die Planungen für die Feldmessungen laufen. Nächste Woche geht es ins Gelände, um die ersten Datensätze mit der Drohne und dem Laserscanner zu erfassen."
+  },
+  {
+    "title": "Erster erfolgreicher Feldtag",
+    "date": "2025-10-29",
+    "image": "assets/images/drohne_im_einsatz.jpg",
+    "text": "Die ersten Drohnenbefliegungen und Tachymeter-Messungen für die Bachelorarbeit sind im Kasten. Die Daten sehen vielversprechend aus!"
+  },
+  {
+    "title": "Halbmarathon-Training",
+    "date": "2025-11-02",
+    "image": "assets/images/laufschuhe_mainz.jpg",
+    "text": "Trotz intensiver Thesis-Phase das Lauftraining nicht vernachlässigen. Der Sport gibt mir die nötige Energie für die Informatik."
+  },
+  {
+    "title": "Datenprozessierung läuft",
+    "date": "2025-11-05",
+    "image": "assets/images/software_punktwolke.png",
+    "text": "Zurück im Büro. Jetzt beginnt die Auswertung der Photogrammetrie-Daten und die Registrierung der Laserscans. Spannend, die 3D-Modelle wachsen zu sehen."
+  },
+  {
+    "title": "Nächster Schritt: Laserscanning",
+    "date": "2025-11-10",
+    "image": "assets/images/laserscanner_geraet.jpg",
+    "text": "Nächste Woche wird das Testgebiet zusätzlich mit dem terrestrischen Laserscanner (TLS) erfasst. Bin gespannt auf den direkten Vergleich zur Drohne."
+  },
+  {
+    "title": "Gastvortrag an der HS Mainz",
+    "date": "2025-10-10",
+    "image": "assets/images/hs_mainz_logo.png",
+    "text": "Spannender Gastvortrag an der Hochschule Mainz zum Thema 'KI in der Geodäsie'. Viele neue Ideen für zukünftige Projekte mitgenommen."
+  },
+  {
+    "title": "Neues Projekt: Punktwolken-Visualisierung",
+    "date": "2025-09-15",
+    "image": "assets/images/pointcloud.gif",
+    "text": "Ein kleines Nebenprojekt zur Visualisierung von 3D-Punktwolken (generiert aus Laserscans) im Webbrowser ist fertiggestellt."
   }
 ]
