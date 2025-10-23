@@ -423,7 +423,7 @@
     newsTab.addEventListener('click', () => {
       if (newsLoaded) return;
 
-      fetch('assets/news.json.json')
+      fetch('assets/news.json')
         .then(response => response.json())
         .then(data => {
           data.forEach(item => {
@@ -463,3 +463,4 @@
 
 </body>
 </html>
+
